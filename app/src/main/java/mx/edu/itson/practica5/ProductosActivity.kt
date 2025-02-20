@@ -32,8 +32,11 @@ class ProductosActivity : AppCompatActivity() {
     }
 
     fun agregarProductos(option:String?) {
+        val titulo:ImageView = findViewById(R.id.imageView) as ImageView
+
         when(option) {
             "Antojitos" -> {
+                titulo.setImageResource(R.drawable.antojitos)
                 menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada - Filled with your choice of meat, served with salad.", 5.69))
                 menu.add(Product("Huaraches", R.drawable.huaraches, "Tortilla gruesa con frijoles, tu carne favorita, lechuga, queso fresco y crema - Big Thick tortilla with beans, your choice of meat, fresh cheese, and sour cream.", 10.99))
                 menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña - Flour tortilla filled with cheese, marinated pork and pineapple.", 7.99))
@@ -43,6 +46,7 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Coctel Mixto", R.drawable.coctel, "", 21.99))
                 menu.add(Product("Coctel de Camarón", R.drawable.coctel, "Shrimp cocktail." , 16.49))
             } "Especialidades" -> {
+                titulo.setImageResource(R.drawable.especialidades)
                 menu.add(Product("Mojarra Frita", R.drawable.mojarra, "Tilapia frita servida con lechuga, cebolla, jitomate, aguacate y tortillas - Fried tilapia served with lettuce, onions, tomatoes, avocado and tortillas.", 17.99))
                 menu.add(Product("Ceviche", R.drawable.ceviche, "Tilapia, camarones, aguacate y pico de gallo servido con Chips - Tilapia, shrimp, avocado and pico de gallo with Chips.", 6.99))
                 menu.add(Product("Botana de Camarones a la Diabla", R.drawable.botanacamarones, "", 19.99))
@@ -52,6 +56,7 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Pulpo al Mojo de Ajo", R.drawable.botanacamarones, "", 35.00))
                 menu.add(Product("Pulpo Zarandeado", R.drawable.botanacamarones, "", 35.00))
             } "Combinations" -> {
+                titulo.setImageResource(R.drawable.combinations)
                 menu.add(Product("Traditional Taco Combo", R.drawable.taco, "Tortilla de Maíz y tu carne favorita. Servido con arroz y frijoles - Corn taco, your choice of meat, served with rice and beans.", 6.99));
                 menu.add(Product("Mexican Burritos", R.drawable.burritos, "Tu carne favorita en una tortilla grande de harina rellena con cebolla frita, pico de gallo, guacamole, sour cream, frijoles y arroz - Your choice of meat on a big burrito made of flour tortilla with rice, beans, lettuce, grilled onions, pico de gallo, guacamole and sour cream.", 12.99));
                 menu.add(Product("Los Portales Burrito", R.drawable.burritosportales, "Large flour tortilla filled with grilled cactus, steak, pastor (seasoned pork), grilled onions, rice and beans. Served with a side of lettuce salad, tomatoes, sour cream and guacamole.", 13.59));
@@ -61,18 +66,21 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Fajita Burrito", R.drawable.fajitaquesadilla, "Gran burrito relleno de tu carne favorita, cebolla, chile, arroz, frijoles y jitomate. Servido con lechuga y guacamole - Large burrito filled with your choice of meat, onions, chile, peppers, rice, beans and tomatoes. Served with lettuce guacamole and sour cream.", 13.59));
                 menu.add(Product("Fajita Quesadilla", R.drawable.fajitaquesadilla, "Quesadilla extra grande (10 inches), rellena con tu carne favorita, cebolla asada, chile banana y jitomate. Servida con arroz, frijoles y ensalada - 10 inches quesadilla filled with your choice of meat, cooked with grilled onions, banana peppers and tomatoes. Served with rice beans and salad.", 13.99));
             } "Tortas" -> {
+                titulo.setImageResource(R.drawable.tortas)
                 menu.add(Product("Torta Regular", R.drawable.torta, "All tortas come with lettuce, onions, tomatoes, avocado, sour cream, jalapeno pepper and your choice of meat.", 12.99));
                 menu.add(Product("Torta - Milanesa de Res o Pollo", R.drawable.tortamilanesa, "Breaded Steak or Chicken.", 13.99));
                 menu.add(Product("Torta Cubana", R.drawable.tortacubana, "Chorizo, asada, jamon, pastor y queso Mexican sausage, steak, marinated pork, ham, and cheese.", 13.99));
                 menu.add(Product("Torta Mixta", R.drawable.tortamixta, "Chorizo, asada y pastor./ Mexican sausage, steak and marinated pork.", 13.99));
                 menu.add(Product("Small Mexican Torta", R.drawable.smallmexican, "Bolillo bread sandwich with your of meat, shredded lettuce, avocado, tomato, onion and sour cream.", 7.39));
             } "Sopas" -> {
+                titulo.setImageResource(R.drawable.sopas)
                 menu.add(Product("Pozole", R.drawable.pozole, "Weekends only.", 5.99));
                 menu.add(Product("Menudo", R.drawable.menudo, "Wednesday to Sunday.", 5.99));
                 menu.add(Product("Caldo de Res", R.drawable.caldores, "", 5.99));
                 menu.add(Product("Caldo de Camarón", R.drawable.caldocamaron, "Shrimp soup.", 13.99));
                 menu.add(Product("Sopa de Mariscos", R.drawable.sopamariscos, "Seafood soup.", 19.99));
             } "Drinks" -> {
+                titulo.setImageResource(R.drawable.drinks)
                 menu.add(Product("Soft Drinks 20oz", R.drawable.michelada, "", 2.99))
                 menu.add(Product("Jarritos", R.drawable.jarritos, "", 2.75))
                 menu.add(Product("Aguas Frescas", R.drawable.caguama, "", 2.99))
